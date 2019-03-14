@@ -3,6 +3,7 @@
 @import "partials/_flex.scss";
 @import "partials/_size.scss";
 @import "partials/margins-padding";
+@import "partials/_positions.scss";
 
 
 *{
@@ -27,6 +28,3 @@ div[class^="col-"]{
     text-align: center;
     padding: 1rem 0;
 }
-
-
-
