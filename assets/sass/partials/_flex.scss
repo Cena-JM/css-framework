@@ -46,3 +46,21 @@
 .align-items-stretch{
   align-items: stretch;
 }
+
+$num: 12;
+@mixin order-setter {
+  @for $i from 1 through $num {
+    .order-#{$i}{
+      order: #{$i}
+    }
+  }
+}
+
+$neg: -3;
+@mixin neg-order {
+  @for $i from $neg through -1 {
+    .neg-order#{$i}{
+      order: $i;
+    }
+  }
+}

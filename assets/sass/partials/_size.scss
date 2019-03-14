@@ -1,0 +1,17 @@
+
+
+
+
+$columns: 12;
+@for $i from 1 through $columns {
+    .col-#{$i}{
+        width:100% / $columns * $i
+    }
+    .col-offset-#{$i}{
+      margin-left: 100% / $columns *$i
+    }
+
+    .col-#{$i}-vw{
+        width: 100vw / $columns * $i
+    }
+}

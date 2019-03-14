@@ -1,4 +1,10 @@
+
+@import "partials/_reset.scss";
 @import "partials/_flex.scss";
+@import "partials/_size.scss";
+@import "partials/margins-padding";
+
+
 *{
     box-sizing: border-box;
 }
@@ -12,6 +18,7 @@
 .row{
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 div[class^="col-"]{
@@ -20,13 +27,6 @@ div[class^="col-"]{
     text-align: center;
     padding: 1rem 0;
 }
-$columns: 12;
 
-@for $i from 1 through $columns {
-    .col-#{$i}{
-        flex: 0 0 100% / $columns * $i
-    }
-    .col-offset-#{$i}{
-      margin-left: 100% / $columns *$i
-    }
-}
+
+
