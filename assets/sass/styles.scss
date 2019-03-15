@@ -3,10 +3,11 @@
 @import "partials/_flex.scss";
 @import "partials/_size.scss";
 @import "partials/margins-padding";
-@import "partials/positions";
+@import "partials/_positions.scss";
+@import "partials/_fonts.scss";
 
 
-*{
+*,::before,::after{
     box-sizing: border-box;
 }
 
