@@ -50,10 +50,25 @@
    }
  }
 
+ $weights: normal,bold,bolder,lighter,initial,inherit;
  @mixin font-weight {
    @for $i from 1 through 9{
      .font-weight-#{$i * 100} {
        font-weight: #{$i * 100};
+     }
+   }
+   @each $weight in $weights{
+     .font-weight-#{$weight}{
+       font-weight: #{$weight};
+     }
+   }
+ }
+
+ $transform: none,capitalize,uppercase,lowercase,initial,inherit;
+ @mixin text-transform{
+   @each $trans in $transform{
+     .text-#{$trans}{
+       text-transform: #{$trans};
      }
    }
  }
@@ -90,3 +105,4 @@
 @include  line-height;
 @include  letter-space;
 @include  word-space;
+@include text-transform;

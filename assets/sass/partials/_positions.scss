@@ -5,3 +5,10 @@ $positions: relative, absolute, fixed, static, sticky;
     position: $item;
   }
 }
+
+$text-props: center,right,justify,initial,inherit;
+@each $prop in $text-props{
+  .text-align-#{$prop}{
+    text-align: #{$prop};
+  }
+}

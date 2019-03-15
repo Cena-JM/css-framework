@@ -1,12 +1,28 @@
 @mixin margin-setter {
     .m-lr-auto{margin: 0 auto;}
     .m-0{margin: 0}
+
     $num: 80;
-    @for $i from 1 through $num {
+    @for $i from 0 through $num {
         .m-l-#{$i}{margin-left: #{$i}px}
         .m-r-#{$i}{margin-right: #{$i}px}
-        .m-t-#{$i}{margin-right: #{$i}px}
-        .m-b-#{$i}{margin-right: #{$i}px}
+        .m-t-#{$i}{margin-top: #{$i}px}
+        .m-b-#{$i}{margin-bottom: #{$i}px}
+        .m-lr-#{$i}{
+            margin-right: #{$i}px;
+            margin-left: #{$i}px;
+        }
+        .m-tb-#{$i}{
+            margin-top: #{$i}px;
+            margin-bottom: #{$i}px;
+        }
+    }
+    $neg-num: -1;
+    @for $i from -100 through $neg-num{
+        .m-l-#{$i}{margin-left: #{$i}px}
+        .m-r-#{$i}{margin-right: #{$i}px}
+        .m-t-#{$i}{margin-top: #{$i}px}
+        .m-b-#{$i}{margin-bottom: #{$i}px}
         .m-lr-#{$i}{
             margin-right: #{$i}px;
             margin-left: #{$i}px;
@@ -21,11 +37,27 @@
 @mixin padding-setter {
     .p-0{padding: 0}
     $num: 80;
-    @for $i from 1 through $num {
+    @for $i from 0 through $num {
         .p-l-#{$i}{padding-left: #{$i}px}
         .p-r-#{$i}{padding-right: #{$i}px}
-        .p-t-#{$i}{padding-right: #{$i}px}
-        .p-b-#{$i}{padding-right: #{$i}px}
+        .p-t-#{$i}{padding-top: #{$i}px}
+        .p-b-#{$i}{padding-bottom: #{$i}px}
+        .p-lr-#{$i}{
+            padding-right: #{$i}px;
+            padding-left: #{$i}px;
+        }
+        .p-tb-#{$i}{
+            padding-top: #{$i}px;
+            padding-bottom: #{$i}px;
+        }
+        .p-around-#{$i}{padding: #{$i}px}
+    }
+    $neg-num: -1;
+    @for $i from -100 through $neg-num{
+        .p-l-#{$i}{padding-left: #{$i}px}
+        .p-r-#{$i}{padding-right: #{$i}px}
+        .p-t-#{$i}{padding-top: #{$i}px}
+        .p-b-#{$i}{padding-bottom: #{$i}px}
         .p-lr-#{$i}{
             padding-right: #{$i}px;
             padding-left: #{$i}px;
