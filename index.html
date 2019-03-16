@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- css grid framework styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- custom styles -->
     <link rel="stylesheet" href="assets/css/custom.css">
-    <title>Document</title>
+    <!-- font-awesome icons import -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>The Odin Project</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <div class="d-flex navbar">
-                <div class="nav-brand d-flex">
-                    <img src="assets/images/logo.svg" alt="logo">
-                    <span class="logo-text">The Odin Project</span>
+            <div class="d-flex navbar m-b-50 navbar-expand-md">
+                <div class="nav-brand d-flex p-tb-5 m-r-16 font-size-a13-rem align-items-center">
+                    <img src="assets/images/logo.svg" alt="logo" class="logo-img">
+                    <span class="logo-text text-transform-uppercase font-weight-bold font-size-a16-rem p-l-8 position-relative">The Odin Project</span>
                 </div>
-                <nav class="navbar-nav">
+                <div class="navbar-toggle show">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav class="navbar-nav d-flex justify-content-end align-items-center p-l-0 m-b-0 m-l-auto ">
                   <ul class="d-flex">
-                      <li class="divider nav-link">Curriculum</li>
-                      <li class="divider nav-link">Community</li>
-                      <li class="divider nav-link">About</li>
-                      <li class="divider nav-link">FAQ</li>
-                      <li class="divider nav-link">|</li>
-                      <li class="divider nav-link">Sign Up</li>
-                      <li class="divider nav-link">Log In</li>
+                      <li class="divider nav-link d-flex justify-content-center align-items-center flex-col"><a href="#" class="nav-item font-weight-bold font-size-16 p-lr-8">Community</a></li>
+                      <li class="divider nav-link d-flex justify-content-center align-items-center flex-col"><a href="#" class="nav-item font-weight-bold font-size-16 p-lr-8">Curriculum</a></li>
+                      <li class="divider nav-link d-flex justify-content-center align-items-center flex-col"><a href="#" class="nav-item font-weight-bold font-size-16 p-lr-8">About</a></li>
+                      <li class="divider nav-link d-flex justify-content-center align-items-center flex-col"><a href="#" class="nav-item font-weight-bold font-size-16 p-lr-8">FAQ</a></li>
+                      <li class="divider nav-link d-flex justify-content-center align-items-center flex-col"><a href="#" class="nav-item font-weight-bold font-size-16 p-lr-8">|</a></li>
+                      <li class="divider nav-link d-flex justify-content-center align-items-center flex-col"><a href="#" class="nav-item font-weight-bold font-size-16 p-lr-8">Sign Up</a></li>
+                      <li class="divider nav-link d-flex justify-content-center align-items-center flex-col"><a href="#" class="nav-item font-weight-bold font-size-16 p-lr-8">Log In</a></li>
                   </ul>
                 </nav>
             </div>
         </header>
         <main>
-            <div id="hero" class="m-lr-auto">
+            <div id="hero" class="m-lr-auto gradient">
                 <div class="hero-title">
                     <h1 class="m-b-0 p-b-15">Your Career in Web Development Starts Here</h1>
                     <p class="p-b-70">Our full stack curriculum is free and supported by a passionate open source community.</p>
@@ -67,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div id="languages" class="p-t-60">
+            <div id="languages" class="p-t-60 bg-whitesmoke">
                 <div class="text-align-center m-b-60">
                     <h2 class="m-b-60 font-weight-bold">Learn everything you need to know to become a web developer</h2>
                 </div>
@@ -107,7 +114,7 @@
                     <a href="#">View Curriculum</a>
                 </div>
             </div>
-            <div id="stories">
+            <div id="stories" class="gradient m-b-80">
                 <div class="text-align-center"><h2 class="stories-title">Success Stories</h2></div>
                 <div class="stories-container row flex-row-wrap m-t-80 m-lr-auto">
                     <div class="sucess-story p-b-36 d-flex col-sm-12 col-md-6 p-around-15">
@@ -139,10 +146,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="read-more text-align-center">
-                    <a href="#">Read more success stories</a>
-                </div>
-                <div class="bottom-cta text-align-center">
+                <div class="bottom-cta text-align-center p-tb-80 p-lr-48">
+                    <div class="read-more text-align-center">
+                        <a href="#">Read more success stories</a>
+                    </div>
                     <p class="">Start learning for free now!</p>
                     <p></p>
                     <p>
@@ -153,14 +160,16 @@
         </main>
         <footer id="footer" class="p-0 text-align-center position-relative d-flex font-size-a10-rem">
             <div class="footer-brand d-flex justify-content-center align-items-center">
-                <img src="" alt="logo">
-                <div class="">The Odin Project</div>
+                <div class="d-flex align-items-center">
+                    <img src="assets/images/logo.svg" alt="logo" class="logo-img">
+                    <span class="logo-text text-transform-uppercase font-weight-bold font-size-a16-rem p-l-8 position-relative">The Odin Project</span>
+                </div>
             </div>
             <div class="footer-social d-flex justify-content-center align-items-center">
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
             <div class="footer-links d-flex justify-content-center align-items-center">
                 <div class="footer-links-container d-flex flex-col align-items-start">

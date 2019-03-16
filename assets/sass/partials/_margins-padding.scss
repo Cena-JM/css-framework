@@ -1,6 +1,8 @@
 @mixin margin-setter {
     .m-lr-auto{margin: 0 auto;}
     .m-0{margin: 0}
+    .m-l-auto{margin-left: auto}
+    .m-r-auto{margin-right: auto}
 
     $num: 80;
     @for $i from 0 through $num {
