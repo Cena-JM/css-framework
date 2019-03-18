@@ -1,0 +1,43 @@
+$columns: 12;
+
+$screen-sm: 576;
+$screen-md: 768;
+$screen-lg: 992;
+$screen-xl: 1200;
+
+@mixin create-mq($breakpoint) {
+    @if($breakpoint == 0) {
+      @content;
+    } @else {
+      @media screen and (min-width: $breakpoint *1px) {
+        @content;
+      }
+    }
+}
+
+@mixin create-col-classes($suffix, $columns, $breakpoint) {
+    @include create-mq($breakpoint){
+        .hidden#{$suffix}{
+            display: none;
+        }
+        @for $i from 1 through $columns {
+            .col#{$suffix}-#{$i}{
+                width:100% / $columns * $i
+            }
+            .col-offset#{$suffix}-#{$i}{
+              margin-left: 100% / $columns *$i
+            }
+        
+            .col#{$suffix}-#{$i}-vw{
+                width: 100vw / $columns * $i
+            }
+        }
+    }
+}
+
+$screen-props: ('': 0,'-sm': $screen-sm,'-md': $screen-md,'-lg': $screen-lg,'-xl': $screen-xl);
+@each $suffix, $breakpoint in $screen-props{
+    @include create-col-classes($suffix, $columns, $breakpoint );
+}
+
+

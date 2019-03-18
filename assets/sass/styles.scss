@@ -1,0 +1,32 @@
+
+@import "partials/_reset.scss";
+@import "partials/_flex.scss";
+@import "partials/_size.scss";
+@import "partials/margins-padding";
+@import "partials/_positions.scss";
+@import "partials/_fonts.scss";
+@import "partials/buttons-links";
+
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    background: #eeeeee;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+div[class^="col-"]{
+    background: lightblue;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1rem 0;
+}

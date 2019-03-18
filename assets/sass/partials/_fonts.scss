@@ -1,0 +1,108 @@
+ // Google-fonts
+
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700,900|EB+Garamond:400,500i,600,700|Lato:400,700,900|Open+Sans:400,700,800|Roboto+Condensed|Source+Sans+Pro:400,700,900|Source+Serif+Pro:600,700');
+
+ // Font Variables
+ $cinzel: 'Cinzel', Serif;
+ $source-serif-pro: 'Source Serif Pro', Serif;
+ $lato: 'Lato', Sans-Serif;
+ $eb-garamond: 'Eb-Garamond', Sans-Serif;
+ $roboto-condensed: 'Roboto Condensed', Sans-Serif;
+ $open-sans: 'Open Sans', Sans-Serif;
+ $source-sans-pro: 'Source Sans Pro', Sans-Serif;
+
+ // Font Classes
+
+ .font-cinzel {
+   font-family: $cinzel;
+ }
+ .source-serif-pro {
+   font-family: $source-serif-pro;
+ }
+ .lato {
+   font-family: $lato;
+ }
+ .eb-garamond {
+   font-family: $eb-garamond;
+ }
+ .roboto-condensed {
+   font-family: $roboto-condensed;
+ }
+ .open-sans {
+   font-family: $open-sans;
+ }
+ .source-sans-pro {
+   font-family: $source-sans-pro;
+ }
+
+ // @mixin
+
+ @mixin font-size {
+   @for $i from 8 through 64{
+     .font-size-#{$i + 1} {
+       font-size: ($i + 1) + px;
+     }
+   }
+   @for $i from 5 through 50{
+     .font-size-a#{$i}-rem {
+       font-size: ($i*0.1) + rem;
+     }
+   }
+ }
+
+ $weights: normal,bold,bolder,lighter,initial,inherit;
+ @mixin font-weight {
+   @for $i from 1 through 9{
+     .font-weight-#{$i * 100} {
+       font-weight: #{$i * 100};
+     }
+   }
+   @each $weight in $weights{
+     .font-weight-#{$weight}{
+       font-weight: #{$weight};
+     }
+   }
+ }
+
+ $transform: none,capitalize,uppercase,lowercase,initial,inherit;
+ @mixin text-transform{
+   @each $trans in $transform{
+     .text-#{$trans}{
+       text-transform: #{$trans};
+     }
+   }
+ }
+
+ @mixin line-height {
+   @for $i from 1 through 6{
+     .line-height-#{$i * 5} {
+       line-height: #{$i * 0.5};
+     }
+   }
+ }
+
+ @mixin letter-space {
+   @for $i from 0 through 5{
+     .letter-space-#{$i * 5} {
+       letter-spacing: #{$i * 5};
+     }
+   }
+ }
+
+ @mixin word-space {
+   @for $i from 0 through 10{
+     .word-space-#{$i * 10} {
+       word-spacing: #{$i * 10};
+     }
+   }
+ }
+
+
+ // includes
+
+@include  font-size;
+@include  font-weight;
+@include  line-height;
+@include  letter-space;
+@include  word-space;
+@include text-transform;
