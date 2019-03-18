@@ -17,7 +17,7 @@ https://raw.githack.com/cena-JM/css-framework/development/
 ## Specs
 Everything is a flexbox, it's the main positioning technique in this framework. So make sure that you fully understand how these classes work `row`, `container`, and `col-sz-*`. This framework is made to fit all screen sizes with mobile responsiveness as a primary issue to tackle.
 It also has offset classes that can be accessed by the class names `col-offset-sz-*`
-**Note:** `sz` is the screen size (breakpoint). The screen sizes are (sm: 576, md: 768,lg: 992,xl: 1200)
+**Note:** `sz` is the screen size (breakpoint). The screen sizes are `sm: 576`, `md: 768`,`lg: 992`,`xl: 1200`
 **Note:** `*` is the number of columns from `1` to `12`
 
 
