@@ -1,3 +1,27 @@
+@font-face {
+	font-family: 'Norse';
+	src: url('../fonts/Norse.otf') format('opentype');
+	font-style: normal;
+}
+
+body {
+		color: rgba(74,74,74,0.7);
+		background: #fff;
+		overflow-x: hidden;
+}
+h1, h2, h3, h4 {
+    color: #4a4a4a;
+}
+a{
+		color: rgba(74,74,74,0.7);
+}
+
+ /* Globals  */
+
+.accent {
+color: #ce973e;
+}
+
 /* header styles */
 
 .navbar{
@@ -27,16 +51,16 @@
 .navbar-toggle{
     position: absolute;
     right: 0;
-    font-size: 1.4em;
-    top: 25px;
-    height: 68px;
+    top: 15px;
     margin-right: 20px;
     display: none;
+		color: #6abfc3;
 }
 .logo-text{
     flex: 1;
     color: #cc9543;
-    font-family: "Norse";
+    font-family: 'Norse';
+		font-size: 2rem;
     letter-spacing: 0.4px;
     display: inline-block;
     bottom: 30%;
@@ -108,7 +132,6 @@
 
 #footer{
     background-color: #fff;
-    font-size: 1em;
     min-height: 277px;
     width: 100%;
     bottom: 0px;
@@ -123,7 +146,6 @@
 }
 
 .footer-social a{
-    font-size: 24px;
     flex: 1;
 }
 
@@ -137,7 +159,7 @@
     flex-basis: 30px;
     color: rgba(74,74,74,0.7);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 794px) {
     .works-grid{flex-direction: column;}
 
     .navbar-expand-md {
@@ -146,6 +168,8 @@
     }
     .navbar{
         position: fixed;
+				top:0;
+				left: 0;
         padding: 0 20px;
         width: 100%;
         z-index: 1;
@@ -159,7 +183,7 @@
     }
 
     .logo-text {
-        font-size: 1.2em;
+        font-size: 1.5rem;
     }
 
     .navbar-nav{
@@ -175,6 +199,7 @@
         display: inline-block;
     }
 
+
     .footer-brand{
         display: none;
     }
@@ -189,3 +214,11 @@
         display: none;
     }
   }
+@media screen and (min-width: 768px) and (max-width: 1118px ) {
+	.navbar{
+			padding: 0 20px;
+	}
+	.logo-text {
+			font-size: 1.7rem;
+	}
+}
